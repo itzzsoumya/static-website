@@ -1,0 +1,126 @@
+
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.text-section {
+    flex: 1.8;
+    padding: 20px 50px;
+    box-sizing: border-box;
+}
+
+.text-section h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.text-section p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* --- */
+
+.about2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.about-container2 {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
+    background: white;
+}
+
+.text-section2 {
+    flex: 1.8;
+    padding: 20px 50px;
+    box-sizing: border-box;
+}
+
+.text-section2 h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.text-section2 p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.image-section2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-section2 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.hr{
+    width: 25%;
+    height: 2px;
+    border-radius: 60%;
+    background-color: red;
+    align-items: center;
+    margin: 4% auto;
+}
+
+
+.container-footer {
+    background: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.container-footerter p {
+    margin: 0;
+    font-size: 1em;
+}

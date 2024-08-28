@@ -1,0 +1,403 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background: #1e1e1e;
+    color: #fff;
+    padding: 15px 0;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #555;
+    border-radius: 4px;
+}
+.hero {
+    position: relative;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    overflow: hidden; /* Ensures the pseudo-element stays within bounds */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('bg-img.gif'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    filter: blur(7px); /* Adjust the blur as needed */
+    z-index: -1; /* Places the blurred image behind the text */
+    background-color: rgba(0, 0, 0, 0.4); /* Adds a dark overlay with 40% opacity */
+    mix-blend-mode: darken;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.5em;
+    position: relative;
+    z-index: 1;
+}
+
+.featured-products,
+.about-us,
+.product-list,
+.contact-us {
+    padding: 50px 0;
+    background: #f4f4f4;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #f5f5f5;
+}
+
+.products-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.product-item a{
+    text-decoration: none;
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.product-item p {
+    color: #777;
+    font-size: 1em;
+}
+
+.about-us img {
+    max-width: 100%;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.about-us p,
+.contact-us p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    margin: 20px 0;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-us form label {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.contact-us form input,
+.contact-us form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.contact-us form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact-us form button {
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.contact-us form button:hover {
+    background-color: #333;
+}
+
+footer {
+    background: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+
+/* auto move in index.html */
+
+.featured-products {
+    width: 90vw;
+    padding: 20px 0 60px;
+    overflow: hidden;
+    margin: 0 auto; 
+    border-radius: 8px;
+    /* background-color: #f5f5f5;  */
+}
+
+.container-scroll {
+    max-width: auto; /* Define a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    overflow: hidden; /* Ensure the content stays within the bounds */
+    position: relative; /* Make it easier to manage the scrolling animation */
+    /* background-color: #e6e6e6; */
+    /* padding: 35px ; */
+    border-radius: 8px;
+}
+
+.products-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap; /* Ensure all items stay in a single row */
+    animation: scroll-left 20s linear infinite; /* Apply the scroll animation */
+}
+
+.product-item {
+    min-width: 200px;
+    text-align: center;
+    flex-shrink: 0; /* Prevent the items from shrinking */
+}
+
+.products-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(-100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(0%); /* End at the left */
+    }
+}
+
+.serve {
+    margin: 8% 0;
+    background-color: #efefef;
+    width: 100vw;
+    height: 60vh;
+}
+
+/* card */
+
+.advertisers-service-sec {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+  }
+  
+  .container-card {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+  
+  .section-header h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .section-header span {
+    color: rgb(255, 23, 131);
+  }
+  
+  .sec-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .sec-icon::before,
+  .sec-icon::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background: #333;
+    margin: 0 10px;
+  }
+  
+  .sec-icon i {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .services-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .col {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .service-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    transition: 0.5s;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+  
+  .service-card::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#0dcaf0, rgb(255, 23, 131));
+    position: absolute;
+    left: 0%;
+    top: -98%;
+    z-index: -2;
+    transition: all 0.4s cubic-bezier(0.77, -0.04, 0, 0.99);
+  }
+  
+  .service-card:hover::after {
+    top: 0%;
+  }
+  
+  .service-card h3 {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #1f194c;
+    margin: 1em 0;
+    z-index: 3;
+  }
+  
+  .service-card p {
+    color: #575a7b;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    z-index: 3;
+  }
+  
+  .icon-wrapper {
+    background-color: #ffffff;
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    height: 2.5em;
+    width: 2.5em;
+    color: rgb(255, 23, 131);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+    z-index: 3;
+  }
+  
+  .service-card:hover .icon-wrapper {
+    color: #0dcaf0;
+  }
+  
+  .service-card:hover h3 {
+    color: #ffffff;
+  }
+  
+  .service-card:hover p {
+    color: #f0f0f0;
+  }
+
+  /* ,,, */
+
+  
